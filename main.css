@@ -83,6 +83,17 @@ p {
     color: #17191A;
 }
 
+@media (max-width: 375px) {
+    .navIcons a {
+        display: inline-block;
+        margin-left: 5px;
+    }
+    
+    .navIcons i {
+        margin-right: 5px;
+    }
+}
+
 /* ------- Landing ------- */
 .landing {
     height: 100vh;
