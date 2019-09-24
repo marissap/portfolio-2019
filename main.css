@@ -207,6 +207,30 @@ ul {
     margin: 0 15px;
 }
 
+.skills .programs span {
+    position: relative;
+    cursor: pointer;
+}
+
+.skills .programs span:hover:before {
+    opacity: 1;
+}
+
+.skills .programs span:before {
+  content: attr(aria-label);
+  opacity: 0;
+  position: absolute;
+  top: 30px;
+  right: -90px;
+  font-size: 14px;
+  width: 100px;
+  padding: 10px;
+  color: #fff;
+  background-color: #555;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
 /* ------- Project 01 ------- */
 .work {
     width: 100%;
