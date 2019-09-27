@@ -418,7 +418,13 @@ ul {
     background-color: #027BFF;
 }
 
-@media (max-width: 375px) {
+@media (min-width: 501px) and (max-width: 796px) {
+    .col {
+        width: 35%;
+    }
+}
+
+@media (max-width: 500px) {
     .col {
         width: 100%;
         display: block;
