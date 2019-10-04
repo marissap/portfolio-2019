@@ -359,6 +359,11 @@ ul {
 
 }
 
+/* ------- My lil codepen ------- */
+.codepen {
+    margin-bottom: 100px;
+}
+
 /* ------- Footer ------- */
 .footer {
     padding-bottom: 7em;
