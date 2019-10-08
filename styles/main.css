@@ -207,6 +207,10 @@ ul {
     background-image: linear-gradient(to right, #f442743d 100%, #f442743d 0);
 }
 
+.profile a.emphasis:hover {
+    background-image: linear-gradient(to right, #7fc13c67 100%, #7fc13c67 0);
+}
+
 /* ------- Skills ------- */
 .skills {
     text-align: center;
