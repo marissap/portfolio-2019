@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
+/* -------- Variables -------- */
+:root {
+    --primary-color: #027BFF;
+    --font-color: #8F9EA5;
+    --bg-color: transparent;
+    --heading-color: #17191A;
+    --emphasis: black;
+    --p-emphasis: #14cefc42;
+    --a-emphasis: #f442743d;
+    --fab: black;
+}
+
+[data-theme="dark"] {
+    --primary-color: #02CCFF;
+    --font-color: #CECECE;
+    --bg-color: #222222;
+    --heading-color: white;
+    --emphasis: white;
+    --p-emphasis: #14cefcb2;
+    --a-emphasis: #f44274c7;
+    --fab: #a8eeff;
+}
+
 /* -------- Global -------- */
 * {
     margin: 0;
@@ -8,7 +31,7 @@
     outline: 0;
     font-size: 100%;
     vertical-align: baseline;
-    background: transparent;
+    background: var(--bg-color);
 }
 
 /* way for an element to clear it's children (floats don't have height) */
@@ -31,23 +54,23 @@ body {
 h1 {
     font-size: 40px;
     font-weight: 400;
-    color: #17191A;
+    color: var(--heading-color);
 }
 
 h2 {
     font-size: 35px;
     font-weight: 400;
-    color: #17191A;
+    color: var(--heading-color);
 }
 
 h5 {
     font-size: 20px;
     margin-top: 10px;
-    color: #17191A;
+    color: var(--heading-color);
 }
 
 p {
-    color: #8F9EA5;
+    color: var(--font-color);
     opacity: 0.8;
     font-weight: 100;
     margin-top: 10px;
@@ -76,11 +99,11 @@ p {
 
 .navIcons i {
     margin-right: 10px;
-    color: #8F9EA5;
+    color: var(--font-color);
 }
 
 .navIcons i:hover {
-    color: #17191A;
+    color: var(--heading-color);
 }
 
 @media (max-width: 375px) {
@@ -121,7 +144,7 @@ ul {
 }
 
 .blue {
-    color: #027BFF;
+    color: var(--primary-color);
 }
 
 /* ------- Text Animation -------- */
@@ -146,7 +169,7 @@ ul {
 }
 
 .animation-one {
-    color: #8F9EA5;
+    color: var(--font-color);
     opacity: 0.8;
     font-weight: 100;
     font-size: 50px;
@@ -193,18 +216,18 @@ ul {
 }
 
 .profile .emphasis {
-    color: black;
+    color: var(--emphasis);
     text-decoration: none;
-    background-image: linear-gradient(to right, #14cefc42 100%, #14cefc42 0);
+    background-image: linear-gradient(to right, var(--p-emphasis) 100%, var(--p-emphasis) 0);
     background-position: 1.2em 0;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: 0.2em 0;
-    box-shadow: inset 0 .5em 0 0 white;
+    box-shadow: inset 0 .5em 0 0 var(--bg-color);
 }
 
 .profile a.emphasis {
-    background-image: linear-gradient(to right, #f442743d 100%, #f442743d 0);
+    background-image: linear-gradient(to right, var(--a-emphasis) 100%, var(--a-emphasis) 0);
 }
 
 .profile a.emphasis:hover {
@@ -250,6 +273,10 @@ ul {
   pointer-events: none;
 }
 
+.fab {
+    color: var(--fab);
+}
+
 /* ------- Project 01 ------- */
 .work {
     width: 100%;
@@ -265,7 +292,7 @@ ul {
 
 .work > .workText > .underline {
     display: block;
-    background-color: #027BFF;
+    background-color: var(--primary-color);
     height: 3px;
     width: 61px;
     margin-top: 5px;
@@ -295,7 +322,7 @@ ul {
 
 .work2 > .workText > .underline {
     display: block;
-    background-color: #027BFF;
+    background-color: var(--primary-color);
     height: 3px;
     width: 61px;
     margin-top: 5px;
@@ -325,7 +352,7 @@ ul {
 
 .work3 > .workText > .underline {
     display: block;
-    background-color: #027BFF;
+    background-color: var(--primary-color);
     height: 3px;
     width: 61px;
     margin-top: 5px;
@@ -342,7 +369,7 @@ ul {
 /* ------- All Projects ------- */
 .work a, .work2 a, .work3 a {
     text-decoration: none;
-    color: #17191A;
+    color: var(--heading-color);
 }
 
 @media (max-width: 375px) {
@@ -375,7 +402,7 @@ ul {
 }
 
 .footer a {
-    color: #8F9EA5;
+    color: var(--font-color);
     text-decoration: none;
 }
 
@@ -394,7 +421,7 @@ ul {
     height: 3px;
     width: 41px;
     margin: 5px auto 0 auto;
-    background-color: #027BFF;
+    background-color: var(--primary-color);
 }
 
 @media (min-width: 501px) and (max-width: 796px) {
@@ -413,3 +440,61 @@ ul {
         line-height: 250%;
     }
 }
+
+/* ------- Theme Toggle ------- */
+.theme-toggle-wrapper {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.theme-toggle {
+    display: inline-block;
+    height: 23px;
+    position: relative;
+    width: 50px;
+}
+  
+.theme-toggle input {
+    display: none;
+}
+  
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+  
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 16px;
+}
+  
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* ------- Dark Mode ------- */
