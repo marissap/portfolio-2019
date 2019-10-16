@@ -2,7 +2,7 @@
 
 /* -------- Variables -------- */
 :root {
-    --primary-color: #027BFF;
+    --primary-color: #14cdfc;
     --font-color: #8F9EA5;
     --bg-color: transparent;
     --heading-color: #17191A;
@@ -13,14 +13,14 @@
 }
 
 [data-theme="dark"] {
-    --primary-color: #02CCFF;
+    --primary-color: #14cdfc;
     --font-color: #CECECE;
     --bg-color: #222222;
     --heading-color: white;
     --emphasis: white;
     --p-emphasis: #14cefcb2;
     --a-emphasis: #f44274c7;
-    --fab: #a8eeff;
+    --fab: white;
 }
 
 /* -------- Global -------- */
@@ -238,6 +238,7 @@ ul {
 .skills {
     text-align: center;
     margin-bottom: 20em;
+    margin-right: 10%;
 }
 
 .skills p {
@@ -251,7 +252,7 @@ ul {
 
 .skills .programs span {
     position: relative;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 .skills .programs span:hover:before {
@@ -277,122 +278,40 @@ ul {
     color: var(--fab);
 }
 
-/* ------- Project 01 ------- */
-.work {
-    width: 100%;
-    position: relative;
-    margin-bottom: 20em;
+/* ------- Projects ------- */
+.projects {
+    text-align: left;
+    margin-left: 10%;
 }
 
-/* selector to change later on to flip */
-.work > .workText {
-    position: absolute;
-    top: 85;
+.projects h2 {
+    margin-bottom: 10px;
 }
 
-.work > .workText > .underline {
-    display: block;
-    background-color: var(--primary-color);
-    height: 3px;
-    width: 61px;
-    margin-top: 5px;
+.projects a {
+    color: var(--font-color);
+    margin-bottom: 5%;
+    font-size: 18px;
 }
 
-.work > .workImg {
-    width: 85%;
-    float: right;
-    -webkit-box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
-    -moz-box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
-    box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
-}
-
-/* ------- Project 02 ------- */
-.work2 {
-    width: 100%;
-    position: relative;
-    margin-bottom: 20em;
-}
-
-.work2 > .workText {
-    position: absolute;
-    top: 85px;
-    right: 0;
-    text-align: right;
-}
-
-.work2 > .workText > .underline {
-    display: block;
-    background-color: var(--primary-color);
-    height: 3px;
-    width: 61px;
-    margin-top: 5px;
-    float: right;
-}
-
-.work2 > .workImg {
-    width: 85%;
-    float: left;
-    -webkit-box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
-    -moz-box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
-    box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
-}
-
-/* ------- Project 03 ------- */
-.work3 {
-    width: 100%;
-    position: relative;
-    margin-bottom: 20em;
-}
-
-/* selector to change later on to flip */
-.work3 > .workText {
-    position: absolute;
-    top: 85;
-}
-
-.work3 > .workText > .underline {
-    display: block;
-    background-color: var(--primary-color);
-    height: 3px;
-    width: 61px;
-    margin-top: 5px;
-}
-
-.work3 > .workImg {
-    width: 85%;
-    float: right;
-    -webkit-box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
-    -moz-box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
-    box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
-}
-
-/* ------- All Projects ------- */
-.work a, .work2 a, .work3 a {
+.projects a:nth-child(n):hover {
     text-decoration: none;
-    color: var(--heading-color);
 }
 
-@media (max-width: 375px) {
-    .work > .workText {
-        margin-bottom: 10%;
-        position: relative;
-    }
-
-    .work2 > .workText {
-        margin-bottom: 50%;
-        position: relative;
-    }
-
-    .work3 > .workText {
-        margin-bottom: 10%;
-        position: relative;
-    }
-
+.projects a:nth-child(4n) {
+    text-decoration: underline #f44274;
 }
 
-/* ------- My lil codepen ------- */
-.codepen {
-    margin-bottom: 100px;
+.projects a:nth-child(4n+1) {
+    text-decoration: underline #14cdfc;
+}
+
+.projects a:nth-child(4n+2) {
+    text-decoration: underline #dd8c00;
+}
+
+.projects a:nth-child(4n+3) {
+    text-decoration: underline #7ec13c;
 }
 
 /* ------- Footer ------- */
@@ -497,4 +416,32 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-/* ------- Dark Mode ------- */
+/* ------- Technical ------- */
+.technical {
+    width: 100%;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+@media screen and (min-width: 800px) {
+    .column {
+      flex: 1
+    }
+  
+    .double-column {
+      flex: 2
+    }
+}
