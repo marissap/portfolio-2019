@@ -316,7 +316,7 @@ ul {
 
 /* ------- Footer ------- */
 .footer {
-    padding-bottom: 7em;
+    padding-bottom: 1em;
     text-align: center;
 }
 
@@ -328,6 +328,12 @@ ul {
 .footer a:hover {
     color: #17191A;
     text-decoration: none;
+}
+
+.footer p {
+    font-size: 75%;
+    margin-top: 5%;
+    font-style: italic;
 }
 
 .col {
