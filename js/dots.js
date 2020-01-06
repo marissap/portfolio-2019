@@ -1,5 +1,5 @@
 function dots() {
-  const colors = ["#7ec13c", "#14cdfc", "#1B1B1B", "#dd8c00", "#f44274"];
+  const colors = ["#7ec13c","#1B1B1B", "#9252e5", "#dd8c00"];
 
   const numdots = 50;
   const dots = [];

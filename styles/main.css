@@ -2,24 +2,23 @@
 
 /* -------- Variables -------- */
 :root {
-    --primary-color: #14cdfc;
-    --font-color: #8F9EA5;
+    --primary-color: #7ec13c;
+    --font-color: #828282;
     --bg-color: transparent;
     --heading-color: #17191A;
     --emphasis: black;
-    --p-emphasis: #14cefc42;
-    --a-emphasis: #f442743d; 
+    --p-emphasis: #7ec13c;
     --fab: black;
 }
 
 [data-theme="dark"] {
-    --primary-color: #14cdfc;
+    --primary-color: #7ec13c;
     --font-color: #CECECE;
     --bg-color: #222222;
     --heading-color: white;
     --emphasis: white;
-    --p-emphasis: #14cefcb2;
-    --a-emphasis: #f44274c7;
+    --p-emphasis: #657a50;
+    /* 7fc13c67; */
     --fab: white;
 }
 
@@ -222,16 +221,16 @@ ul {
     background-position: 1.2em 0;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-position: 0.2em 0;
+    background-position: 0 0.8em;
     box-shadow: inset 0 .5em 0 0 var(--bg-color);
 }
 
 .profile a.emphasis {
-    background-image: linear-gradient(to right, var(--a-emphasis) 100%, var(--a-emphasis) 0);
+    background-image: linear-gradient(to right, var(--p-emphasis) 100%, var(--p-emphasis) 0);
 }
 
 .profile a.emphasis:hover {
-    background-image: linear-gradient(to right, #7fc13c67 100%, #7fc13c67 0);
+    background-image: linear-gradient(to right, var(--font-color) 100%, var(--font-color) 0);
 }
 
 /* ------- Skills ------- */
@@ -292,13 +291,14 @@ ul {
     color: var(--font-color);
     margin-bottom: 5%;
     font-size: 18px;
+    text-decoration: underline #7ec13c;
 }
 
 .projects a:nth-child(n):hover {
     text-decoration: none;
 }
 
-.projects a:nth-child(4n) {
+/* .projects a:nth-child(4n) {
     text-decoration: underline #f44274;
 }
 
@@ -312,7 +312,7 @@ ul {
 
 .projects a:nth-child(4n+3) {
     text-decoration: underline #7ec13c;
-}
+} */
 
 /* ------- Footer ------- */
 .footer {
