@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Karla&display=swap');
 
 /* -------- Variables -------- */
 :root {
@@ -41,7 +41,7 @@
 }
 
 html {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Self Modern', sans-serif;
     font-weight: 100%;
 }
 
@@ -53,6 +53,7 @@ body {
 h1 {
     font-size: 40px;
     font-weight: 400;
+    font-family: 'Bree Serif', serif;
     color: var(--heading-color);
 }
 
@@ -78,42 +79,33 @@ p {
 
 /* ------- Nav ------- */
 .nav {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: 100px;
 }
 
-.navIcons {
-    flex: 1;
-}
-
-.navIcons {
-    text-align: right;
-}
-
-.navIcons a {
+.nav-home {
     display: inline-block;
-    margin-left: 20px;
 }
 
-.navIcons i {
-    margin-right: 10px;
-    color: var(--font-color);
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-size: 18px;
 }
 
-.navIcons i:hover {
-    color: var(--heading-color);
+.nav-link a {
+    display: inline-block;
+    margin-left: 15px;
+    text-decoration: none;
+    color: var(--emphasis);
+    border-bottom: 2px solid var(--emphasis);
+
 }
 
-@media (max-width: 375px) {
-    .navIcons a {
-        display: inline-block;
-        margin-left: 5px;
-    }
-    
-    .navIcons i {
-        margin-right: 5px;
-    }
+.nav-link:hover a {
+    border-bottom-width: 0px;
 }
 
 /* ------- Landing ------- */
@@ -150,169 +142,137 @@ ul {
 .animation-one {
     display: inline-block;
     overflow: hidden;
-    white-space: nowrap;
-}
-
-.animation-one:first-of-type {
+    white-space: normal;
     animation: showup 7s infinite;
-}
-
-.animation-one:last-of-type {
-    width:0px;
-    animation: reveal 7s infinite;
-}
-
-.animation-one:last-of-type span {
-    margin-left:-355px;
-    animation: slidein 7s infinite;
+    padding-right: 40%;
 }
 
 .animation-one {
     color: var(--font-color);
     opacity: 0.8;
     font-weight: 100;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 @keyframes showup {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:0;}
-}
-
-@keyframes slidein {
-    0% { margin-left:-800px; }
-    20% { margin-left:-800px; }
-    35% { margin-left:0px; }
-    100% { margin-left:0px; }
-}
-
-@keyframes reveal {
-    0% { opacity:0; width:0px; }
-    20% { opacity:1; width:0px; }
-    30% { width:355px; }
-    80% { opacity:1; }
-    100% { opacity:0; width:355px; }
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 @media (max-width: 375px) {
     .animation-one {
-        font-size: 20px;
+        font-size: 10px;
     }
 }
 
 /* ------- Profile ------- */
 .profile {
     text-align: center;
-    margin-bottom: 20em;
+    margin-bottom: 10em;
 }
 
-@media (max-width: 375px) {
-    .profile img {
-        width: 200px;
-    }
+.profile .bio {
+    margin-bottom: 20px;
 }
 
-.profile .emphasis {
+.profile .bio p {
+    font-size: 18px;
+}
+
+.card-container {
+    display: grid;
+    margin-bottom: 40px;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 32px;
+    grid-row-gap: 8px;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+}
+
+.card {
+    padding: 24px;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+}
+
+.card h4 {
+    text-transform: uppercase;
+    font-family: 'Bree Serif', serif;
+    font-weight: 100;
+    padding-bottom: 10px;
+}
+
+.card span {
+    color: var(--primary-color);
+}
+
+.card p {
+    font-size: 16px;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* ------- Work ------- */
+.work {
+    margin-bottom: 10em;
+}
+
+.work-desc {
+    font-size: 18px;
+}
+
+.work-desc a {
     color: var(--emphasis);
     text-decoration: none;
-    background-image: linear-gradient(to right, var(--p-emphasis) 100%, var(--p-emphasis) 0);
-    background-position: 1.2em 0;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: 0 0.8em;
-    box-shadow: inset 0 .5em 0 0 var(--bg-color);
 }
 
-.profile a.emphasis {
-    background-image: linear-gradient(to right, var(--p-emphasis) 100%, var(--p-emphasis) 0);
-}
-
-.profile a.emphasis:hover {
-    background-image: linear-gradient(to right, var(--font-color) 100%, var(--font-color) 0);
-}
-
-/* ------- Skills ------- */
-.skills {
-    text-align: center;
-    margin-bottom: 20em;
-    margin-right: 10%;
-}
-
-.skills p {
-    margin-bottom: 30px;
-}
-
-.skills i {
-    width: 40px;
-    margin: 0 15px;
-}
-
-.skills .programs span {
-    position: relative;
-    cursor: pointer;    
-}
-
-.skills .programs span:hover:before {
-    opacity: 1;
-}
-
-.skills .programs span:before {
-  content: attr(aria-label);
-  opacity: 0;
-  position: absolute;
-  top: 30px;
-  right: -90px;
-  font-size: 14px;
-  width: 100px;
-  padding: 10px;
-  color: #fff;
-  background-color: #555;
-  border-radius: 3px;
-  pointer-events: none;
-}
-
-.fab {
-    color: var(--fab);
+.work-desc a:hover {
+    color: var(--primary-color);
 }
 
 /* ------- Projects ------- */
 .projects {
-    text-align: left;
-    margin-left: 10%;
+    margin-bottom: 10em;
 }
 
-.projects h2 {
+.projects h1 {
     margin-bottom: 10px;
 }
 
-.projects a {
-    color: var(--font-color);
-    margin-bottom: 5%;
+.project-title {
+    color: var(--emphasis);
+    text-decoration: underline #7ec13c;
+}
+
+.project-desc {
     font-size: 18px;
-    text-decoration: underline #7ec13c;
 }
 
-.projects a:nth-child(n):hover {
-    text-decoration: none;
+.project-tech, .project-learn-more {
+    color: var(--emphasis);
+    font-size: 16px;
+    margin: 0;
 }
 
-/* .projects a:nth-child(4n) {
-    text-decoration: underline #f44274;
+.projects span {
+    color: var(--font-color);
 }
 
-.projects a:nth-child(4n+1) {
-    text-decoration: underline #14cdfc;
+.projects a {    
+    color: var(--font-color);
+    margin-right: 10px;
+    text-decoration: 0.5px solid var(--font-color);
 }
 
-.projects a:nth-child(4n+2) {
-    text-decoration: underline #dd8c00;
+.projects a:hover {    
+    color: var(--primary-color);
 }
-
-.projects a:nth-child(4n+3) {
-    text-decoration: underline #7ec13c;
-} */
 
 /* ------- Footer ------- */
 .footer {
@@ -331,14 +291,21 @@ ul {
 }
 
 .footer p {
+    color: #000;
+}
+
+.footer .col p {
+    font-size: 16px;    
+}
+
+.footer-finish {
     font-size: 75%;
-    margin-top: 5%;
-    font-style: italic;
 }
 
 .col {
     width: 10%;
     display: inline-block;
+    margin: 20px 0px;
 }
 
 .underlineSmall {
