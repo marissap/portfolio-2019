@@ -291,7 +291,7 @@ ul {
 }
 
 .footer p {
-    color: #000;
+    color: var(--emphasis);
 }
 
 .footer .col p {
