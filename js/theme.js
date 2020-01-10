@@ -1,17 +1,17 @@
 window.addEventListener('load', function () {
     const checkbox = document.querySelector(".theme-switcher");
     checkbox.addEventListener('change', switchTheme, false);
-})
 
-const currentTheme = localStorage.getItem('theme');
+    const currentTheme = localStorage.getItem('theme');
 
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-  
-    if (currentTheme === 'dark') {
-        checkbox.checked = true;
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+    
+        if (currentTheme === 'dark') {
+            checkbox.checked = true;
+        }
     }
-}
+})
 
 function switchTheme(e) {
     if (e.target.checked) {
