@@ -303,6 +303,10 @@ ul {
     margin: 20px 0px;
 }
 
+.col a:hover + .underlineSmall {
+    background-color: #000000;
+}
+
 .underlineSmall {
     display: block;
     height: 3px;
