@@ -99,7 +99,14 @@ p {
     text-decoration: none;
     color: var(--emphasis);
     border-bottom: 2px solid var(--emphasis);
+}
 
+.nav-link:first-child  {
+    margin-left: 0; 
+}
+
+.nav-link:last-child  {
+    margin-right: 30px; 
 }
 
 .nav-link:hover a {
@@ -132,12 +139,11 @@ ul {
     font-size: 80px;
 }
 
-@media screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
     .landing-l h1 {
         font-size: 60px;
     }
 }
-
 
 /* ------- Text Animation -------- */
 .animation-one {
@@ -161,9 +167,10 @@ ul {
     100% { opacity: 0; }
 }
 
-@media screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
     .animation-one {
-        font-size: 10px;
+        font-size: 20px;
+        padding-right: 25%;
     }
 }
 
