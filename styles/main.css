@@ -167,24 +167,28 @@ ul {
     margin-bottom: 10em;
 }
 
+.profile h1 {
+    padding-bottom: 20px;
+}
+
 .profile .bio {
     margin-bottom: 20px;
 }
 
 .profile .bio p {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .card-container {
     display: grid;
-    margin-bottom: 40px;
-    grid-auto-columns: 1fr;
+    padding-top: 30px;
+    margin-bottom: 40px;    
     grid-column-gap: 32px;
-    grid-row-gap: 8px;
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     -ms-grid-rows: auto;
     grid-template-rows: auto;
+    
 }
 
 .card {
@@ -196,7 +200,6 @@ ul {
 
 .card h4 {
     text-transform: uppercase;
-    font-family: 'Lato', serif;
     font-weight: 100;
     padding-bottom: 10px;
 }
@@ -206,7 +209,7 @@ ul {
 }
 
 .card p {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .card:hover {
@@ -309,7 +312,7 @@ ul {
 
 .underlineSmall {
     display: block;
-    height: 3px;
+    height: 1px;
     width: 41px;
     margin: 5px auto 0 auto;
     background-color: var(--primary-color);
