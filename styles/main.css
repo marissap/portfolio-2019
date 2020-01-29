@@ -132,6 +132,12 @@ ul {
     font-size: 80px;
 }
 
+@media screen and (max-width: 375px) {
+    .landing-l h1 {
+        font-size: 60px;
+    }
+}
+
 
 /* ------- Text Animation -------- */
 .animation-one {
@@ -155,7 +161,7 @@ ul {
     100% { opacity: 0; }
 }
 
-@media (max-width: 375px) {
+@media screen and (max-width: 375px) {
     .animation-one {
         font-size: 10px;
     }
