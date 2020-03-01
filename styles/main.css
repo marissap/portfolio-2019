@@ -48,6 +48,7 @@ html {
 body {
     width: 60%;
     margin: auto;
+    overflow-x: hidden;
 }
 
 h1 {
