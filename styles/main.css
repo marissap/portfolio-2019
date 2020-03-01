@@ -351,6 +351,7 @@ ul {
 
 /* ------- Theme Toggle ------- */
 .theme-toggle-wrapper {
+    z-index: 10;
     position: fixed;
     bottom: 0;
     right: 0;
