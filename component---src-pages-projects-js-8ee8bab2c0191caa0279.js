@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{"16l3":function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),r=n.n(a),i=n("vrFN"),o=n("Bl7J");t.default=function(e){var t=e.location;return r.a.createElement(o.a,{location:t},r.a.createElement("p",null,"This page is currently a work in progress. In the (near) future it will hold a list of my side projects and notes on my experience building them."),r.a.createElement(i.a,{title:"Projects"}))}}}]);
+//# sourceMappingURL=component---src-pages-projects-js-8ee8bab2c0191caa0279.js.map
