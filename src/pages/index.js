@@ -9,7 +9,7 @@ import Projects from "../components/projects"
 const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title="{siteTitle}">
-      <SEO title="All posts" />
+      <SEO title="Marissa Phul | Software Engineer" />
       <Bio />
       <Projects data={data}/>
     </Layout>
