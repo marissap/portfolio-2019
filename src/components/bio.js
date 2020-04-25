@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 const Bio = () => {
   return (
@@ -9,13 +8,13 @@ const Bio = () => {
       <p>Currently working on video distribution at Twitch and studying computer science at uOttawa.</p>
       <ul className="social-links">
         <li className="social-link">
-          <Link to="/about">↖︎github</Link>
+          <a href="https://github.com/marissap">↖︎github</a>
         </li>
         <li className="social-link">
-            <Link to="/projects">↖︎linkedin</Link>
+            <a href="https://www.linkedin.com/in/marissaphul/">↖︎linkedin</a>
         </li>
         <li className="social-link">
-            <Link to="/work">↖︎twitter</Link>
+            <a href="https://twitter.com/marisosx">↖︎twitter</a>
         </li>
       </ul>
     </div>
