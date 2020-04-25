@@ -19,14 +19,17 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <article>
         <header>
-          <h1
+          <h2
             style={{
               marginTop: rhythm(1),
               marginBottom: 0,
+              textDecoration: `underline`,
+              textDecorationColor: `#329B86`,
+              // `#5860b0`,
             }}
           >
             {post.frontmatter.title}
-          </h1>
+          </h2>
           <p
             style={{
               ...scale(-1 / 5),
@@ -44,7 +47,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           }}
         />
         <footer>
-          <Bio />
         </footer>
       </article>
 

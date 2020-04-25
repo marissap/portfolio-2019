@@ -2,12 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import Nav from "../components/nav"
-import { scale } from "../utils/typography"
 
-
-const Header = ({ location }) => {
-  console.log(location)
-  const rootPath = `${__PATH_PREFIX__}/`
+const Header = () => {
   let header
   const data = useStaticQuery(graphql`
     query headerQuery {
@@ -23,49 +19,29 @@ const Header = ({ location }) => {
   `)
   const { author } = data.site.siteMetadata
 
-  if (location.pathname === rootPath) {
-    header = (
-      <h1
+  header = (
+    <h1
+      style={{
+        marginTop: 0,
+      }}
+    >
+      <Link
         style={{
-          ...scale(1.5),
-          marginBottom: 0,
-          marginTop: 0,
+          boxShadow: `none`,
+          textDecoration: `none`,
+          color: `inherit`,
         }}
+        to={`/`}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {author.name}
-        </Link>
-      </h1>      
-    )
-  } else {
-    header = (
-      <h1
-        style={{
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {author.name}
-        </Link>
-      </h1>
-    )
-  }
+        {author.name}
+      </Link>
+    </h1>
+  )
+
   return (
-    <div style={{
+    <div 
+      className="header-with-nav"
+      style={{
         width: `100%`,
         display: `flex`,
         justifyContent: `space-between`,
