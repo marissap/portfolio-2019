@@ -6,7 +6,7 @@ const Projects = ({ data }) => {
     const posts = data.allMarkdownRemark.edges
 
     return (
-        <section>
+        <section className="main-content">
             <h2><span className="dashed-underline">Projects</span></h2>
             <p className="project"><a href="https://github.com/marissap/cli-cheatsheet">CLI Cheatsheet</a>: CLI that allows the user to save common CLI commands (gatsby develop, npm start, etc.) to a sqlite database. Commands are then accessible from the command-line. Instead of remembering dozens of comands you only have to know one.</p>
             <p className="project"><a href="https://github.com/marissap/ANN/blob/master/ANN.ipynb">Artifical Neural Network</a>: Built a basic ANN from scratch using a sigmuid activation function, performing Batch Gradient Descent, and training on a BFGS Algorithm.</p>             

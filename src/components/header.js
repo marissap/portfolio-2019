@@ -39,14 +39,7 @@ const Header = () => {
   )
 
   return (
-    <div 
-      className="header-with-nav"
-      style={{
-        width: `100%`,
-        display: `flex`,
-        justifyContent: `space-between`,
-        alignItems: `baseline`,
-    }}>
+    <div className="header-with-nav">
         <header>{header}</header>
         <Nav/>
     </div>

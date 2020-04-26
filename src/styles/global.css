@@ -76,6 +76,9 @@ a:hover {
 
 .header-with-nav {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .project a {
@@ -88,5 +91,10 @@ a:hover {
     }
     .header-with-nav {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-content {
+        text-align: center;
     }
 }
