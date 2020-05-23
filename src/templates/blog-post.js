@@ -24,8 +24,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginTop: rhythm(1),
               marginBottom: 0,
               textDecoration: `underline`,
-              textDecorationColor: `#329B86`,
-              // `#5860b0`,
+              textDecorationColor: `rgb(255, 162, 131)`,
             }}
           >
             {post.frontmatter.title}

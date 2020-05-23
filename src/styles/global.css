@@ -1,19 +1,44 @@
-html {
-    background-color: #fff;
+body {
+    --bg: #fff;
+    --textHover: rgb(112, 112, 112);
+    --textLink: #000;
+    --accent: rgb(255, 162, 131);
+    --text: #000;
+  
+    background-color: var(--bg);
+    color: var(--text)
+}
+  
+body.dark {
+    -webkit-font-smoothing: antialiased;
+  
+    --bg: rgb(30, 30, 30);
+    --textHover: rgb(155, 155, 155);
+    --textLink: rgb(216, 216, 216);
+    --accent: rgb(255, 162, 131);
+    --text: rgb(216, 216, 216);
 }
 
 a {
-    color: black;
+    color: var(--textLink);
+    text-decoration: none;
 }
 
 a:hover {    
-    color: rgb(112, 112, 112);
+    color: var(--textHover);
 }
 
 .dashed-underline {
-    border-bottom: 2px rgb(255, 162, 131) dashed;
+    border-bottom: 2px var(--accent) dashed;
     display: inline-block;
     line-height: 0.85;
+}
+
+.dashed-underline-multiline {
+    background-image: linear-gradient(to right, var(--accent) 75%, transparent 75%);
+    background-position: 0 1.24em;
+    background-repeat: repeat-x;
+    background-size: 8px 2px;
 }
 
 .bio-div {
@@ -26,6 +51,7 @@ a:hover {
 
 .bio-div h2 {
     padding-top: 10%;
+    line-height: 1.8;
 }
 
 .bio-div p {
@@ -37,13 +63,14 @@ a:hover {
     list-style: none;
     display: flex;
     font-size: 18px;
+    text-decoration: none;
 }
 
 .nav-link a {
     display: inline-block;
     margin-left: 20px;
     margin-right: 20px;
-    border-bottom: 2px rgb(255, 162, 131) solid;
+    border-bottom: 2px var(--accent) solid;
 }
 
 .social-links {
@@ -55,7 +82,7 @@ a:hover {
 .social-link a {
     display: inline-block;
     margin-left: 20px;
-    border-bottom: 2px rgb(255, 162, 131) solid;
+    border-bottom: 2px var(--accent) solid;
     line-height: 0.85;
 }
 
@@ -96,5 +123,27 @@ a:hover {
     }
     .main-content {
         text-align: center;
+    }
+    footer {
+        text-align: center;
+    }
+    .bio-div h2 {
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    ul {
+        margin-left: 0;
+    }
+    .bio-div h2 {
+        font-size: 26px;
+    }
+    .sub-header {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .nav-link a {
+        border-bottom: 0;
     }
 }
