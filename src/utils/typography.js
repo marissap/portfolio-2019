@@ -18,6 +18,7 @@ Wordpress2016.overrideThemeStyles = () => {
     "p,li": {
       fontFamily:`Titillium Web, sans-serif`,
       marginBottom: `0`,
+      // fontSize: `18px`,
     },
   }
 }

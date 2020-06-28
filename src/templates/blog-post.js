@@ -22,9 +22,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h2
             style={{
               marginTop: rhythm(1),
-              marginBottom: 0,
-              textDecoration: `underline`,
-              textDecorationColor: `rgb(255, 162, 131)`,
+              marginBottom: 0
             }}
           >
             {post.frontmatter.title}

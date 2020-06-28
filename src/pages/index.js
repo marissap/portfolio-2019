@@ -9,7 +9,7 @@ import Projects from "../components/projects"
 const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title="{siteTitle}">
-      <SEO title="Marissa Phul | Software Engineer" />
+      <SEO title="MPhul"/>
       <div className="row">
         <div className="column sub-header">          
           <Bio />
@@ -34,7 +34,7 @@ export const pageQuery = graphql`
             }
             frontmatter {
                 title
-                date(formatString: "DD-MM-YYYY")
+                date(formatString: "MMMM DD, YYYY")
                 description
             }
           }

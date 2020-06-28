@@ -14,7 +14,7 @@ const Projects = ({ data }) => {
             {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
-                <article key={node.fields.slug}>
+                <article key={node.fields.slug} style ={{ marginBottom: '3%' }}>
                     <header>
                         <p><Link to={node.fields.slug}>{title}</Link></p>
                         <p style={{ fontSize: "smaller" }}>{node.frontmatter.date}</p>

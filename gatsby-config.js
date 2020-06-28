@@ -8,7 +8,7 @@ module.exports = {
     description: `portfolio and blog.`,
     siteUrl: `http://mphul.codes/`,
     social: {
-      twitter: `marisosx`,
+      twitter: `os_maris`,
     },
   },
   plugins: [

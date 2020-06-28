@@ -13,7 +13,7 @@ const Bio = () => {
             <a href="https://www.linkedin.com/in/marissaphul/">↖︎linkedin</a>
         </li>
         <li className="social-link">
-            <a href="https://twitter.com/marisosx">↖︎twitter</a>
+            <a href="https://twitter.com/os_maris">↖︎twitter</a>
         </li>
       </ul>
     </div>

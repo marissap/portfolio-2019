@@ -1,10 +1,11 @@
 body {
     --bg: #fff;
     --textHover: rgb(112, 112, 112);
-    --textLink: #000;
-    --accent: rgb(255, 162, 131);
+    --navLink: #000;
+    --accent: rgb(82, 31, 183);
     --text: #000;
-  
+    --hsla: hsla(0,0%,0%,0.2);
+
     background-color: var(--bg);
     color: var(--text)
 }
@@ -14,18 +15,38 @@ body.dark {
   
     --bg: rgb(30, 30, 30);
     --textHover: rgb(155, 155, 155);
-    --textLink: rgb(216, 216, 216);
-    --accent: rgb(255, 162, 131);
+    --navLink: rgb(216, 216, 216);
+    --accent: rgb(135,206,250);
     --text: rgb(216, 216, 216);
+    --hsla: hsla(176, 19%, 80%, 0.5);
+
 }
 
 a {
-    color: var(--textLink);
+    color: var(--accent);
     text-decoration: none;
 }
 
 a:hover {    
     color: var(--textHover);
+}
+
+blockquote {
+    color: var(--accent);
+    font-size: 22px;
+    margin-top: 3%;
+    text-align: center;
+    border-left-color: var(--accent);
+    font-style: normal;
+}
+
+hr {
+    width: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    background: var(--hsla);
 }
 
 .dashed-underline {
@@ -67,6 +88,7 @@ a:hover {
 }
 
 .nav-link a {
+    color: var(--navLink);
     display: inline-block;
     margin-left: 20px;
     margin-right: 20px;
@@ -82,8 +104,7 @@ a:hover {
 .social-link a {
     display: inline-block;
     margin-left: 20px;
-    border-bottom: 2px var(--accent) solid;
-    line-height: 0.85;
+    color: var(--accent);
 }
 
 .row {

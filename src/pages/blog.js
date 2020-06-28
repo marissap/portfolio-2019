@@ -9,7 +9,7 @@ const AllPosts = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <p>I take notes. While I'm reading after I've spoken to somebody when ideas pop into my head while walking. I like to document these, not always into nicely formatted blog posts, sometimes just a few lines. As of right now, I've got 2423 sitting in my notes app, this is where I'll publish the ones I'm brave enough to share. Topics range from programming and theoretical computer science to governance and economics and even to book reviews and mundane observations. I'm not saying they're good, that's for you to decide.</p>
+      <p style={{ marginTop: '3.5rem' }}>I take notes. While I'm reading, after I've spoken to somebody, when ideas pop into my head while walking. I like to document these, not always into nicely formatted blog posts, sometimes just a few lines. As of right now, I've got 2423 sitting in my notes app, this is where I'll publish the ones I'm brave enough to share. Topics range from programming and theoretical computer science to governance and economics and even to book reviews and mundane observations. I'm not saying they're good, that's for you to decide.</p>
         <SEO title="All posts" />
         {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
