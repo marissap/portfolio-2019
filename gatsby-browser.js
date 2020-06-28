@@ -1,6 +1,0 @@
-import "typeface-titillium-web"
-import "typeface-catamaran"
-
-import "prismjs/themes/prism-okaidia.css"
-
-import "./src/styles/global.css"
